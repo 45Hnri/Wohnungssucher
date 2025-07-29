@@ -42,6 +42,8 @@ FROM base
 WORKDIR /app
 
 COPY --from=build /app/dist.js .
+COPY --from=build /app/.env .
+COPY --from=deps /root/.cache/puppeteer /root/.cache/puppeteer
 
 RUN mkdir -p /etc/cron.d
 
