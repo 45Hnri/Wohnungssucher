@@ -47,7 +47,7 @@ RUN mkdir -p /etc/cron.d
 
 RUN touch cron.log
 
-RUN echo "*/5 * * * * root cd /app && /root/.bun/bin/bun run start >> cron.log 2>&1" > /etc/cron.d/crontab
+RUN echo "*/5 * * * * root cd /app && /root/.bun/bin/bun run dist.js >> cron.log 2>&1" > /etc/cron.d/crontab
 
 RUN chmod 0644 /etc/cron.d/crontab
 
