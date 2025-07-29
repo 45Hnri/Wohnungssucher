@@ -1,8 +1,10 @@
 <h1 align="center">Wohnungssucher</h1>
 
-> [!INFO]
+> [!NOTE]
 > Ein self-hosted Webscraper für freie Wohnungen.
-> [[#Disclaimer|Zur Nutzung für Bildungszwecke]]
+> [Zur Nutzung für Bildungszwecke](#Disclaimer)
+
+<img width="748" height="837" alt="example" src="https://github.com/user-attachments/assets/0d8e6147-b960-4ff0-80a7-68e6a6257dd5" />
 
 ## Features
 
