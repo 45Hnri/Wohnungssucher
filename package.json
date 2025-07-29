@@ -1,0 +1,21 @@
+{
+    "name": "wohnungssuche",
+    "module": "index.ts",
+    "scripts": {
+        "dev": "bun run index.ts",
+        "start": "bun run dist.js",
+        "build": "bun build ./index.ts --outfile=dist.js --target=bun"
+    },
+    "type": "module",
+    "devDependencies": {
+        "@types/bun": "latest"
+    },
+    "peerDependencies": {
+        "typescript": "^5.0.0"
+    },
+    "dependencies": {
+        "@types/nodemailer": "^6.4.17",
+        "nodemailer": "^7.0.5",
+        "puppeteer": "^24.15.0"
+    }
+}
