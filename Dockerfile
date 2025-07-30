@@ -18,7 +18,7 @@ ENV BUN_INSTALL=/root/.bun
 ENV PATH="$BUN_INSTALL/bin:$PATH"
 
 
-FROM base as deps
+FROM base AS deps
 
 WORKDIR /app
 
@@ -27,7 +27,7 @@ COPY package.json bun.lockb ./
 RUN bun install
 
 
-FROM base as build
+FROM base AS build
 
 WORKDIR /app
 

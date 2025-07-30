@@ -1,0 +1,36 @@
+services:
+  gluetun:
+    image: qmcgaw/gluetun
+    container_name: gluetun
+    environment:
+      - TZ=${TZ}
+      - VPN_SERVICE_PROVIDER=${VPN_SERVICE_PROVIDER}
+      - VPN_TYPE=${VPN_TYPE}
+      - OPENVPN_USER=${OPENVPN_USER}
+      - OPENVPN_PASSWORD=${OPENVPN_PASSWORD}
+      - SERVER_COUNTRIES=${SERVER_COUNTRIES}
+    cap_add:
+      - NET_ADMIN
+    devices:
+      - /dev/net/tun:/dev/net/tun
+    restart: unless-stopped
+  scraper:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: scraper
+    depends_on:
+      - gluetun
+    environment:
+      - TZ=${TZ}
+      - BUNDESLAND=${BUNDESLAND}
+      - STADT=${STADT}
+      - TOTALRENT=${TOTALRENT}
+      - DEV=${DEV}
+      - MAIL_RECEIVER=${MAIL_RECEIVER}
+      - MAIL_ADDRESS=${MAIL_ADDRESS}
+      - MAIL_PASS=${MAIL_PASS}
+      - MAIL_HOST=${MAIL_HOST}
+      - MAIL_PORT=${MAIL_PORT}
+    network_mode: "service:gluetun"
+    restart: unless-stopped
