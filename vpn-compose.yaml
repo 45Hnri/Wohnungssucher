@@ -32,5 +32,7 @@ services:
       - MAIL_PASS=${MAIL_PASS}
       - MAIL_HOST=${MAIL_HOST}
       - MAIL_PORT=${MAIL_PORT}
+      - DISCORD_CHANNEL_ID=${DISCORD_CHANNEL_ID}
+      - DISCORD_BOT_TOKEN=${DISCORD_BOT_TOKEN}
     network_mode: "service:gluetun"
     restart: unless-stopped

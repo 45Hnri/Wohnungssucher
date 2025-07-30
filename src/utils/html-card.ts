@@ -1,3 +1,5 @@
+import type { flatInfoItem } from "./types";
+
 const style = `
             :root {
                 --background: 0 0% 100%;
@@ -182,26 +184,12 @@ const style = `
             }
 `;
 
-export type emailItem = {
-    image: string | null;
-    title: string;
-    company: string | null;
-    space: number;
-    totalRent: number;
-    id: string;
-    rooms: number | string;
-    quater: string | null;
-    street: string | null;
-    houseNumber: string | null;
-    tags: string[];
-};
-
 export function makeEmailHtml({
     title,
     items,
 }: {
     title: string;
-    items: emailItem[];
+    items: flatInfoItem[];
 }) {
     return `<!doctype html>
 <html lang="en">
@@ -232,7 +220,7 @@ export function makeEmailHtml({
         <article>
             <img
                 class="shadow"
-                src="${image}"
+                src="${image[0] ?? ""}"
                 alt="Wohnungsbild"
             />
             <a href="https://www.immobilienscout24.de/expose/${id}">

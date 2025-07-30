@@ -4,7 +4,8 @@ import {
     constructIS24Url,
     IS24_filterSeen,
     IS24_getAllPages,
-    IS24_summarizeToMail,
+    IS24_sendCards,
+    IS24_summarizeToCards,
 } from "./src/utils/IS24-data";
 import { assertEnv } from "./src/utils/helper";
 import { isDocker } from "./src/utils/docker";
@@ -38,7 +39,7 @@ async function main() {
     const unseen = await IS24_filterSeen(all);
 
     if (unseen.length) {
-        const ids = await IS24_summarizeToMail(unseen);
+        const ids = await IS24_sendCards(IS24_summarizeToCards(unseen));
         await appendSeenList(ids);
         console.log("found", ids.length);
     } else {
