@@ -9,12 +9,14 @@
 ## Features
 
 - **Self-hosted**: bare metal oder docker container
+- **VPN-Support**: docker compose mit openvpn
 - **Benachrichtigungen**: E-Mail
 - **Quellen**: 1
 
 ### Geplant
 
 - Discord Benachrichtigungen
+- Wireguard VPN-Support
 - automatische Bewerbung
 - weiter Quellen
 
@@ -24,17 +26,23 @@
 
 ### Environment Variables
 
-| Key           | Erklärung                | Beipiel             |
-|---------------|--------------------------|---------------------|
-| BUNDESLAND    | Bundesland nach URL      | nordrhein-westfalen |
-| STADT         | Stadt nach URL           | koeln               |
-| TOTALRENT     | Warmmiete in Euro        | 420                 |
-| MAIL_RECEIVER | Empfänger E-Mail-Adresse | selbst@mail.de      |
-| MAIL_ADDRESS  | Sender E-Mail-Adresse    | send@mail.de        |
-| MAIL_PASS     | Sender E-Mail Passwort   | ********            |
-| MAIL_HOST     | Host Domain              | smtp.host.de        |
-| MAIL_PORT     | Sende Port               | 587                 |
-| DEV           | Zeige Browserfenster     | 1                   |
+| Key                  | Erklärung                | Beipiel             |
+|----------------------|--------------------------|---------------------|
+| BUNDESLAND           | Bundesland nach URL      | nordrhein-westfalen |
+| STADT                | Stadt nach URL           | koeln               |
+| TOTALRENT            | Warmmiete in Euro        | 420                 |
+| MAIL_RECEIVER        | Empfänger E-Mail-Adresse | selbst@mail.de      |
+| MAIL_ADDRESS         | Sender E-Mail-Adresse    | send@mail.de        |
+| MAIL_PASS            | Sender E-Mail Passwort   | ********            |
+| MAIL_HOST            | Host Domain              | smtp.host.de        |
+| MAIL_PORT            | Sende Port               | 587                 |
+| DEV                  | Zeige Browserfenster     | 1                   |
+| TZ                   | eigene Zeitzone          | Europe/Berlin       |
+| VPN_SERVICE_PROVIDER | VPN Anbieter             | mullvad             |
+| VPN_TYPE             | VPN Service              | openvpn             |
+| OPENVPN_USER         | OVPN Nutzername          | 20934239203840293   |
+| OPENVPN_PASSWORD     | OVPN Passwort            | m                   |
+| SERVER_COUNTRIES     | VPN Länderliste          | Germany             |
 
 ## Disclaimer
 
