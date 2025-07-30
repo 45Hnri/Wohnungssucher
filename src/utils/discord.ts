@@ -82,7 +82,7 @@ export function DC_toMessageCard({
             separator,
             {
                 type: 17,
-                accent_color: 703487,
+                accent_color: 16777215 * Math.random(),
                 components: [
                     !!image?.length && {
                         type: DC_compTypes.Media_Gallery,
