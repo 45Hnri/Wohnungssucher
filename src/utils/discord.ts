@@ -86,7 +86,7 @@ export function DC_toMessageCard({
                 components: [
                     !!image?.length && {
                         type: DC_compTypes.Media_Gallery,
-                        items: image.slice(0, 5).map((url) => ({
+                        items: image.slice(0, 4).map((url) => ({
                             media: {
                                 url,
                             },
