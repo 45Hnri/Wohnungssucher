@@ -24,12 +24,13 @@ export function makeEmailHtml({
                         company,
                         space,
                         totalRent,
-                        id,
+                        rent,
                         rooms,
                         street,
                         houseNumber,
                         tags,
                         quater,
+                        link,
                     }) => `
                 <tr>
                     <td align="center">
@@ -45,7 +46,7 @@ export function makeEmailHtml({
                             </tr>
                             <tr>
                                 <td style="padding-top: 12px;">
-                                    <a href="https://www.immobilienscout24.de/expose/${id}"
+                                    <a href="${link}"
                                         style="text-decoration: underline; color: #1f1f1f; font-size: 20px; font-weight: bold; font-family: sans-serif; display: block;"
                                     >
                                         ${title}
@@ -67,7 +68,7 @@ export function makeEmailHtml({
                                             </td>
                                             <td align="center" style="border-right: 1px solid #e4e4e7; padding: 8px;">
                                                 <div style="font-size: 10px; color: #737373; text-align: left">Preis</div>
-                                                <div style="font-size: 20px;">${totalRent ?? "-"}€</div>
+                                                <div style="font-size: 20px;">${totalRent ?? rent ?? "-"}€ ${!totalRent && rent ? " + NK" : ""}</div>
                                             </td>
                                             <td align="center" style="padding: 8px;">
                                                 <div style="font-size: 10px; color: #737373; text-align: left">Räume</div>

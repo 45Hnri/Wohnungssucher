@@ -9,6 +9,14 @@ export function mockNavigator() {
     Object.defineProperty(navigator, "plugins", { get: () => [1, 2, 3] });
 }
 
+export async function disguisePage(page: Page) {
+    // important against robot detection
+    await page.evaluateOnNewDocument(mockNavigator);
+    await page.setUserAgent(
+        "Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0",
+    );
+}
+
 export function isExcessRequest(req: HTTPRequest) {
     return (
         req.url().endsWith(".png") ||
@@ -29,9 +37,7 @@ export async function handlePageResponses<T>({
     onResponse: (res: HTTPResponse, controller: AbortController) => Promise<T>;
     url: string;
 }): Promise<T[]> {
-    // important against robot detection
-    await page.evaluateOnNewDocument(mockNavigator);
-    await page.setUserAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64)");
+    await disguisePage(page);
 
     const controller = new AbortController();
 

@@ -11,7 +11,7 @@
 - **Self-hosted**: bare metal oder docker container
 - **VPN-Support**: docker compose mit openvpn
 - **Benachrichtigungen**: E-Mail, Discord Bot
-- **Quellen**: 1
+- **Quellen**: 2
 
 ### Geplant
 
@@ -25,11 +25,13 @@
 
 ### Environment Variables
 
-| Key                  | Erklärung                    | Beipiel             |
+| Key                  | Erklärung                    | Beispiel             |
 |----------------------|------------------------------|---------------------|
 | BUNDESLAND           | Bundesland nach URL          | nordrhein-westfalen |
 | STADT                | Stadt nach URL               | koeln               |
+| RENT                 | Kaltmiete in Euro            | 320                 |
 | TOTALRENT            | Warmmiete in Euro            | 420                 |
+| LOCATIONID           | Id für bestimmte Quellen     | AD08DE8634          |
 | MAIL_RECEIVER        | Empfänger E-Mail-Adresse     | selbst@mail.de      |
 | MAIL_ADDRESS         | Sender E-Mail-Adresse        | send@mail.de        |
 | MAIL_PASS            | Sender E-Mail Passwort       | ********            |

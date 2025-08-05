@@ -26,6 +26,8 @@ services:
       - BUNDESLAND=${BUNDESLAND}
       - STADT=${STADT}
       - TOTALRENT=${TOTALRENT}
+      - RENT=${RENT}
+      - LOCATIONID=${LOCATIONID}
       - DEV=${DEV}
       - MAIL_RECEIVER=${MAIL_RECEIVER}
       - MAIL_ADDRESS=${MAIL_ADDRESS}

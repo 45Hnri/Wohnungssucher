@@ -63,7 +63,8 @@ export function DC_toMessageCard({
     tags,
     title,
     totalRent,
-    id,
+    rent,
+    link,
 }: flatInfoItem) {
     const divider = {
         type: DC_compTypes.Separator,
@@ -94,7 +95,7 @@ export function DC_toMessageCard({
                     },
                     {
                         type: DC_compTypes.Text_Display,
-                        content: `# [${title}](https://www.immobilienscout24.de/expose/${id})`,
+                        content: `# [${title}](${link})`,
                     },
                     !!company && {
                         type: DC_compTypes.Text_Display,
@@ -112,7 +113,7 @@ export function DC_toMessageCard({
                             },
                             {
                                 type: DC_compTypes.Button,
-                                label: `${totalRent}€`,
+                                label: `${totalRent ?? rent ?? "?"}€ ${!totalRent && rent ? "+ NK" : ""}`,
                                 style: 1,
                                 custom_id: 2,
                             },
