@@ -1,5 +1,5 @@
 import puppeteer from "puppeteer";
-import { IS24_consent, IW_consent } from "./src/cookies";
+import { IS24_consent } from "./src/cookies";
 import {
     IS24_constructURL,
     IS24_getAllPages,
