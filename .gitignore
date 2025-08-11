@@ -6,7 +6,7 @@ dist.js
 # testfiles
 
 *.test
-test.*
+*test.*
 example.*
 
 # id-file
