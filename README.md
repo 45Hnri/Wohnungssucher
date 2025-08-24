@@ -4,7 +4,20 @@
 > Ein self-hosted Webscraper für freie Wohnungen.
 > [Zur Nutzung für Bildungszwecke](#Disclaimer)
 
-<img width="748" height="837" alt="example" src="https://github.com/user-attachments/assets/0d8e6147-b960-4ff0-80a7-68e6a6257dd5" />
+<table width="100%">
+  <thead>
+    <tr>
+      <th width="50%">Discord</th>
+      <th width="50%">E-Mail</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td width="50%"><img width="700" height="800" alt="wohnungssucher-discord" src="https://github.com/user-attachments/assets/620a77f1-ea01-4968-8702-4af5370a494a" /></td>
+      <td width="50%"><img width="700" height="800" alt="wohnungssucher-e-mail" src="https://github.com/user-attachments/assets/7bc9797e-715e-46f3-807f-4220a5395f4b" /></td>
+    </tr>
+  </tbody>
+</table>
 
 ## Features
 
